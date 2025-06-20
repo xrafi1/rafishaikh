@@ -38,17 +38,11 @@
             background-color: rgba(0, 0, 0, 0.95);
         }
         .hero-text {
-            font-size: 4.5rem; /* Matches "Crafting" and "Code" */
-            font-weight: bold;
-            letter-spacing: -0.05em;
-            line-height: 0.9; /* Tighter line spacing to match image */
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
-            animation: fadeIn 1s ease-in-out;
-        }
-        .hero-text .small-text {
-            font-size: 2.5rem; /* Matches "the Future with" */
+            font-size: 3.75rem; /* Uniform size matching the image (~60px) */
             font-weight: bold;
             letter-spacing: -0.02em;
+            line-height: 1.0; /* Even spacing between lines */
+            animation: fadeIn 1s ease-in-out;
         }
         .section {
             min-height: 100vh;
@@ -152,10 +146,7 @@
         }
         @media (max-width: 768px) {
             .hero-text {
-                font-size: 3rem; /* Scaled down for mobile */
-            }
-            .hero-text .small-text {
-                font-size: 1.5rem; /* Scaled down for mobile */
+                font-size: 2.5rem; /* Scaled down for mobile */
             }
             .nav-menu {
                 display: none;
@@ -220,10 +211,8 @@
             <div class="container mx-auto px-4 text-center">
                 <h1 class="hero-text font-extrabold mb-6">
                     <span>Crafting</span><br>
-                    <span class="small-text">the</span><br>
-                    <span class="small-text">Future</span><br>
-                    <span class="small-text">with</span><br>
-                    <span>Code</span>
+                    <span>the Future</span><br>
+                    <span>with Code</span>
                 </h1>
                 <p class="text-lg mb-8 text-gray-300">Rafi | Web Developer | Silicon Valley Dreamer</p>
                 <a href="#projects" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base">Explore Projects</a>
@@ -406,25 +395,4 @@
         });
 
         // Smooth scroll for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade-in animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 1s ease-in-out';
-                }
-            });
-        }, { threshold: 0.2 });
-        fadeElements.forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+        document.querySelectorAll
