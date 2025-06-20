@@ -36,15 +36,17 @@
             background-color: rgba(0, 0, 0, 0.95);
         }
         .hero-text {
-            font-size: 4.5rem; /* Matches "Crafting" and "Code" size */
-            line-height: 1.1;
-            letter-spacing: -0.05em;
+            font-size: 4.5rem; /* Matches "Crafting" and "Code" */
             font-weight: bold;
+            letter-spacing: -0.05em;
+            line-height: 0.9; /* Tighter line spacing to match image */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
             animation: fadeIn 1s ease-in-out;
         }
         .hero-text .small-text {
-            font-size: 2.5rem; /* Matches "the Future with" size */
+            font-size: 2.5rem; /* Matches "the Future with" */
             font-weight: bold;
+            letter-spacing: -0.02em;
         }
         .section {
             min-height: 100vh;
@@ -148,10 +150,10 @@
         }
         @media (max-width: 768px) {
             .hero-text {
-                font-size: 3rem; /* Adjusted for mobile */
+                font-size: 3rem; /* Scaled down for mobile */
             }
             .hero-text .small-text {
-                font-size: 1.5rem; /* Adjusted for mobile */
+                font-size: 1.5rem; /* Scaled down for mobile */
             }
             .nav-menu {
                 display: none;
@@ -216,7 +218,8 @@
             <div class="container mx-auto px-4 text-center">
                 <h1 class="hero-text font-extrabold mb-6">
                     <span>Crafting</span><br>
-                    <span class="small-text">the Future</span><br>
+                    <span class="small-text">the</span><br>
+                    <span class="small-text">Future</span><br>
                     <span class="small-text">with</span><br>
                     <span>Code</span>
                 </h1>
@@ -343,12 +346,12 @@
                         <p class="mb-6 text-gray-300">A dynamic platform revolutionizing education with interactive tools and resources.</p>
                         <a href="#" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">View Project</a>
                     </article>
-                    <article class="project-card p-6 rounded-xl fade-in">
+                    <article class="skill-card p-6 rounded-xl fade-in">
                         <h3 class="text-2xl font-bold mb-4">Hotface.site</h3>
                         <p class="mb-6 text-gray-300">A sleek social platform connecting people through shared passions.</p>
                         <a href="https://www.hotface.site" target="_blank" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">Visit Site</a>
                     </article>
-                    <article class="project-card p-6 rounded-xl fade-in">
+                    <article class="skill-card p-6 rounded-xl fade-in">
                         <h3 class="text-2xl font-bold mb-4">Stylx.shop</h3>
                         <p class="mb-6 text-gray-300">A modern e-commerce platform for trendy fashion and seamless shopping.</p>
                         <a href="https://www.stylx.shop" target="_blank" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">Visit Site</a>
