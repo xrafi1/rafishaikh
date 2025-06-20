@@ -38,11 +38,16 @@
             background-color: rgba(0, 0, 0, 0.95);
         }
         .hero-text {
-            font-size: 3.75rem; /* Uniform size matching the image (~60px) */
+            font-size: 3.75rem; /* Uniform size for main text (~60px) */
             font-weight: bold;
             letter-spacing: -0.02em;
             line-height: 1.0; /* Even spacing between lines */
             animation: fadeIn 1s ease-in-out;
+        }
+        .sub-text {
+            font-size: 1.25rem; /* Smaller text size (~20px) */
+            color: #B3B3B3; /* Lighter gray for sub-text */
+            margin-top: 1rem;
         }
         .section {
             min-height: 100vh;
@@ -148,6 +153,9 @@
             .hero-text {
                 font-size: 2.5rem; /* Scaled down for mobile */
             }
+            .sub-text {
+                font-size: 1rem; /* Scaled down for mobile */
+            }
             .nav-menu {
                 display: none;
                 position: absolute;
@@ -214,8 +222,8 @@
                     <span>the Future</span><br>
                     <span>with Code</span>
                 </h1>
-                <p class="text-lg mb-8 text-gray-300">Rafi | Web Developer | Silicon Valley Dreamer</p>
-                <a href="#projects" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base">Explore Projects</a>
+                <p class="sub-text">Rafi | Web Developer | Silicon Valley Dreamer</p>
+                <a href="#projects" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base mt-8">Explore Projects</a>
             </div>
         </section>
 
@@ -387,12 +395,4 @@
         });
 
         // Close menu on link click
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll for nav links
-        document.querySelectorAll
+        document.querySelectorAll('.nav-menu a').forEach(li
