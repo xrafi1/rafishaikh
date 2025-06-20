@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafi's Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <title>Rafi - Web Developer Portfolio | Silicon Valley</title>
+    <meta name="description" content="Rafi, a skilled web developer based in Silicon Valley, showcases expertise in HTML, CSS, JavaScript, React, Node.js, and more. Explore projects and connect for opportunities.">
+    <meta name="keywords" content="Rafi, web developer, portfolio, Silicon Valley, frontend developer, backend developer, HTML, CSS, JavaScript, React, Node.js">
+    <meta name="author" content="Rafi">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Rafi - Web Developer Portfolio">
+    <meta property="og:description" content="Discover Rafi's web development projects, skills in frontend and backend technologies, and connect for collaboration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rafiportfolio.com"> <!-- Replace with actual URL -->
+    <meta property="og:image" content="https://www.rafiportfolio.com/og-image.jpg"> <!-- Replace with actual image URL -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rafi - Web Developer Portfolio">
+    <meta name="twitter:description" content="Explore Rafi's portfolio featuring web development projects and skills in HTML, CSS, JavaScript, and more.">
+    <meta name="twitter:image" content="https://www.rafiportfolio.com/og-image.jpg"> <!-- Replace with actual image URL -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -20,10 +36,15 @@
             background-color: rgba(0, 0, 0, 0.95);
         }
         .hero-text {
-            font-size: 3rem;
+            font-size: 4.5rem; /* Matches "Crafting" and "Code" size */
             line-height: 1.1;
             letter-spacing: -0.05em;
+            font-weight: bold;
             animation: fadeIn 1s ease-in-out;
+        }
+        .hero-text .small-text {
+            font-size: 2.5rem; /* Matches "the Future with" size */
+            font-weight: bold;
         }
         .section {
             min-height: 100vh;
@@ -59,7 +80,6 @@
         .hover\:border-gray-400:hover {
             border-color: #B3B3B3 !important;
         }
-        /* Hamburger Menu Styles */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -82,7 +102,6 @@
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -7px);
         }
-        /* Navigation Menu Styles */
         .nav-menu {
             display: flex;
             align-items: center;
@@ -118,7 +137,6 @@
         .nav-menu.active li:nth-child(3) { transition-delay: 0.3s; }
         .nav-menu.active li:nth-child(4) { transition-delay: 0.4s; }
         .nav-menu.active li:nth-child(5) { transition-delay: 0.5s; }
-        /* Skill Card Styles */
         .skill-card {
             display: flex;
             align-items: center;
@@ -128,10 +146,12 @@
         .skill-icon {
             font-size: 1.5rem;
         }
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero-text {
-                font-size: 2rem;
+                font-size: 3rem; /* Adjusted for mobile */
+            }
+            .hero-text .small-text {
+                font-size: 1.5rem; /* Adjusted for mobile */
             }
             .nav-menu {
                 display: none;
@@ -171,11 +191,11 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar fixed top-0 left-0 w-full z-50 py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Header -->
+    <header class="navbar fixed top-0 left-0 w-full z-50 py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
             <h1 class="text-3xl font-extrabold tracking-tight">Rafi</h1>
-            <button class="hamburger md:hidden" aria-label="Toggle navigation">
+            <button class="hamburger md:hidden" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -187,164 +207,171 @@
                 <li><a href="#projects" class="hover:text-gray-400 transition">Projects</a></li>
                 <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Home Section -->
-    <section id="home" class="section flex items-center justify-center bg-black">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="hero-text font-extrabold mb-6">Crafting the Future<br>with Code</h2>
-            <p class="text-lg mb-8 text-gray-300">Rafi | Web Developer | Silicon Valley Dreamer</p>
-            <a href="#projects" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base">Explore Projects</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section bg-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold mb-10 text-center fade-in">About Me</h2>
-            <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-300">
-                <p class="fade-in">Hey there! 👋</p>
-                <p class="mt-6 fade-in">I’m Rafi, a web developer who’s all about crafting cool stuff with code.</p>
-                <p class="mt-6 fade-in">I’m also a B.Tech student, totally hooked on tech and how it all works.</p>
-                <p class="mt-6 fade-in">Born and raised in India, but now I’m here in Silicon Valley, chasing that big dream.</p>
-                <p class="mt-6 fade-in">You’ll find me coding into the wee hours or dreaming up ideas over coffee at a café.</p>
-                <p class="mt-6 fade-in">This is just the start of my adventure, and I’m pumped to keep writing it with code and a whole lot of guts. 💻✨</p>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section flex items-center justify-center bg-black">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="hero-text font-extrabold mb-6">
+                    <span>Crafting</span><br>
+                    <span class="small-text">the Future</span><br>
+                    <span class="small-text">with</span><br>
+                    <span>Code</span>
+                </h1>
+                <p class="text-lg mb-8 text-gray-300">Rafi | Web Developer | Silicon Valley Dreamer</p>
+                <a href="#projects" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base">Explore Projects</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold mb-10 text-center fade-in">My Skills</h2>
-            <div class="space-y-12">
-                <!-- Frontend Skills -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6 text-center fade-in">🌟 Frontend Skills</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.1s;">
-                            <span class="skill-icon">📄</span>
-                            <p class="text-lg font-semibold">HTML</p>
+        <!-- About Section -->
+        <section id="about" class="section bg-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-extrabold mb-10 text-center fade-in">About Me</h2>
+                <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-300">
+                    <p class="fade-in">Hey there! 👋 I'm Rafi, a passionate web developer based in Silicon Valley.</p>
+                    <p class="mt-6 fade-in">I specialize in crafting dynamic, user-friendly websites using cutting-edge technologies.</p>
+                    <p class="mt-6 fade-in">As a B.Tech student, I'm deeply engaged in exploring how technology shapes the future.</p>
+                    <p class="mt-6 fade-in">Originally from India, I'm now chasing big dreams in the heart of tech innovation.</p>
+                    <p class="mt-6 fade-in">When I'm not coding late into the night, you’ll find me brainstorming ideas over coffee.</p>
+                    <p class="mt-6 fade-in">This is just the beginning of my journey, and I’m excited to build more with code and creativity. 💻✨</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section bg-black">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-extrabold mb-10 text-center fade-in">My Skills</h2>
+                <div class="space-y-12">
+                    <!-- Frontend Skills -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-center fade-in">🌟 Frontend Skills</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.1s;">
+                                <span class="skill-icon">📄</span>
+                                <p class="text-lg font-semibold">HTML</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.2s;">
+                                <span class="skill-icon">🎨</span>
+                                <p class="text-lg font-semibold">CSS</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.3s;">
+                                <span class="skill-icon">⚙️</span>
+                                <p class="text-lg font-semibold">JavaScript</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.4s;">
+                                <span class="skill-icon">⚛️</span>
+                                <p class="text-lg font-semibold">React</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.5s;">
+                                <span class="skill-icon">💅</span>
+                                <p class="text-lg font-semibold">Tailwind CSS</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.6s;">
+                                <span class="skill-icon">📦</span>
+                                <p class="text-lg font-semibold">Bootstrap</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.7s;">
+                                <span class="skill-icon">🌿</span>
+                                <p class="text-lg font-semibold">Vue.js</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.8s;">
+                                <span class="skill-icon">🅰️</span>
+                                <p class="text-lg font-semibold">Angular</p>
+                            </article>
                         </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.2s;">
-                            <span class="skill-icon">🎨</span>
-                            <p class="text-lg font-semibold">CSS</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.3s;">
-                            <span class="skill-icon">⚙️</span>
-                            <p class="text-lg font-semibold">JavaScript</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.4s;">
-                            <span class="skill-icon">⚛️</span>
-                            <p class="text-lg font-semibold">React</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.5s;">
-                            <span class="skill-icon">💅</span>
-                            <p class="text-lg font-semibold">Tailwind CSS</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.6s;">
-                            <span class="skill-icon">📦</span>
-                            <p class="text-lg font-semibold">Bootstrap</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.7s;">
-                            <span class="skill-icon">🌿</span>
-                            <p class="text-lg font-semibold">Vue.js</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.8s;">
-                            <span class="skill-icon">🅰️</span>
-                            <p class="text-lg font-semibold">Angular</p>
+                    </div>
+                    <!-- Backend Skills -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-center fade-in">⚡ Backend Skills</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.1s;">
+                                <span class="skill-icon">🖥️</span>
+                                <p class="text-lg font-semibold">Node.js</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.2s;">
+                                <span class="skill-icon">🚀</span>
+                                <p class="text-lg font-semibold">Express.js</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.3s;">
+                                <span class="skill-icon">🐘</span>
+                                <p class="text-lg font-semibold">PHP</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.4s;">
+                                <span class="skill-icon">🐍</span>
+                                <p class="text-lg font-semibold">Python (Django / Flask)</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.5s;">
+                                <span class="skill-icon">💎</span>
+                                <p class="text-lg font-semibold">Ruby on Rails</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.6s;">
+                                <span class="skill-icon">☕</span>
+                                <p class="text-lg font-semibold">Java (Spring Boot)</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.7s;">
+                                <span class="skill-icon">🗄️</span>
+                                <p class="text-lg font-semibold">MySQL</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.8s;">
+                                <span class="skill-icon">🍃</span>
+                                <p class="text-lg font-semibold">MongoDB</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.9s;">
+                                <span class="skill-icon">🔥</span>
+                                <p class="text-lg font-semibold">Firebase</p>
+                            </article>
+                            <article class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 1.0s;">
+                                <span class="skill-icon">🐘</span>
+                                <p class="text-lg font-semibold">PostgreSQL</p>
+                            </article>
                         </div>
                     </div>
                 </div>
-                <!-- Backend Skills -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6 text-center fade-in">⚡ Backend Skills</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.1s;">
-                            <span class="skill-icon">🖥️</span>
-                            <p class="text-lg font-semibold">Node.js</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.2s;">
-                            <span class="skill-icon">🚀</span>
-                            <p class="text-lg font-semibold">Express.js</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.3s;">
-                            <span class="skill-icon">🐘</span>
-                            <p class="text-lg font-semibold">PHP</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.4s;">
-                            <span class="skill-icon">🐍</span>
-                            <p class="text-lg font-semibold">Python (Django / Flask)</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.5s;">
-                            <span class="skill-icon">💎</span>
-                            <p class="text-lg font-semibold">Ruby on Rails</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.6s;">
-                            <span class="skill-icon">☕</span>
-                            <p class="text-lg font-semibold">Java (Spring Boot)</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.7s;">
-                            <span class="skill-icon">🗄️</span>
-                            <p class="text-lg font-semibold">MySQL</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.8s;">
-                            <span class="skill-icon">🍃</span>
-                            <p class="text-lg font-semibold">MongoDB</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 0.9s;">
-                            <span class="skill-icon">🔥</span>
-                            <p class="text-lg font-semibold">Firebase</p>
-                        </div>
-                        <div class="skill-card p-4 rounded-xl fade-in" style="animation-delay: 1.0s;">
-                            <span class="skill-icon">🐘</span>
-                            <p class="text-lg font-semibold">PostgreSQL</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold mb-10 text-center fade-in">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="project-card p-6 rounded-xl fade-in">
-                    <h3 class="text-2xl font-bold mb-4">Edumark</h3>
-                    <p class="mb-6 text-gray-300">A dynamic platform revolutionizing education with interactive tools and resources.</p>
-                    <a href="#" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">View Project</a>
-                </div>
-                <div class="project-card p-6 rounded-xl fade-in">
-                    <h3 class="text-2xl font-bold mb-4">Hotface.site</h3>
-                    <p class="mb-6 text-gray-300">A sleek social platform connecting people through shared passions.</p>
-                    <a href="https://www.hotface.site" target="_blank" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">Visit Site</a>
-                </div>
-                <div class="project-card p-6 rounded-xl fade-in">
-                    <h3 class="text-2xl font-bold mb-4">Stylx.shop</h3>
-                    <p class="mb-6 text-gray-300">A modern e-commerce platform for trendy fashion and seamless shopping.</p>
-                    <a href="https://www.stylx.shop" target="_blank" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">Visit Site</a>
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-black">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-extrabold mb-10 text-center fade-in">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="project-card p-6 rounded-xl fade-in">
+                        <h3 class="text-2xl font-bold mb-4">Edumark</h3>
+                        <p class="mb-6 text-gray-300">A dynamic platform revolutionizing education with interactive tools and resources.</p>
+                        <a href="#" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">View Project</a>
+                    </article>
+                    <article class="project-card p-6 rounded-xl fade-in">
+                        <h3 class="text-2xl font-bold mb-4">Hotface.site</h3>
+                        <p class="mb-6 text-gray-300">A sleek social platform connecting people through shared passions.</p>
+                        <a href="https://www.hotface.site" target="_blank" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">Visit Site</a>
+                    </article>
+                    <article class="project-card p-6 rounded-xl fade-in">
+                        <h3 class="text-2xl font-bold mb-4">Stylx.shop</h3>
+                        <p class="mb-6 text-gray-300">A modern e-commerce platform for trendy fashion and seamless shopping.</p>
+                        <a href="https://www.stylx.shop" target="_blank" class="text-white font-semibold border-b-2 border-white hover:border-gray-400 transition">Visit Site</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-extrabold mb-10 fade-in">Let's Connect</h2>
-            <p class="text-lg mb-8 text-gray-300 fade-in">Got an idea or want to chat? Drop me a line!</p>
-            <a href="mailto:heyxrafi@hotmail.com" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base">Send Email</a>
-            <div class="mt-8 flex justify-center space-x-4 text-sm sm:text-lg">
-                <a href="https://github.com/rafi" target="_blank" class="hover:text-gray-400 transition fade-in">GitHub</a>
-                <a href="https://linkedin.com/in/rafi" target="_blank" class="hover:text-gray-400 transition fade-in">LinkedIn</a>
-                <a href="https://x.com/rafi" target="_blank" class="hover:text-gray-400 transition fade-in">X</a>
-                <a href="https://www.instagram.com/0xrafi?igsh=MWk2YzAwc2J4bW1xbA==" target="_blank" class="hover:text-gray-400 transition fade-in">Instagram</a>
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-gray-800">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-extrabold mb-10 fade-in">Let's Connect</h2>
+                <p class="text-lg mb-8 text-gray-300 fade-in">Got an idea or want to collaborate? Reach out!</p>
+                <a href="mailto:heyxrafi@hotmail.com" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-base">Send Email</a>
+                <div class="mt-8 flex justify-center space-x-4 text-sm sm:text-lg">
+                    <a href="https://github.com/rafi" target="_blank" class="hover:text-gray-400 transition fade-in">GitHub</a>
+                    <a href="https://linkedin.com/in/rafi" target="_blank" class="hover:text-gray-400 transition fade-in">LinkedIn</a>
+                    <a href="https://x.com/rafi" target="_blank" class="hover:text-gray-400 transition fade-in">X</a>
+                    <a href="https://www.instagram.com/0xrafi?igsh=MWk2YzAwc2J4bW1xbA==" target="_blank" class="hover:text-gray-400 transition fade-in">Instagram</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-black py-6 text-center text-gray-300">
