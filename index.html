@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafi | Web Developer & Designer | Silicon Valley</title>
-    <meta name="description" content="Innovative web developer creating digital experiences with cutting-edge technologies. Based in Silicon Valley.">
-    
+    <title>Rafi | Premium Web Developer & Designer | Silicon Valley</title>
+    <meta name="description" content="Premium web developer creating exceptional digital experiences with cutting-edge technologies. Based in Silicon Valley.">
+
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Rafi | Web Developer Portfolio">
-    <meta property="og:description" content="Crafting the future with code. Web developer specializing in modern web technologies.">
+    <meta property="og:title" content="Rafi | Premium Web Developer Portfolio">
+    <meta property="og:description" content="Crafting the future with code. Premium web developer specializing in modern web technologies.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rafi.dev">
     <meta property="og:image" content="https://rafi.dev/social-preview.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/wFLSmtKN/Picsart-25-06-20-18-18-20-681.png">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,493 +29,505 @@
                 extend: {
                     colors: {
                         primary: {
+                            DEFAULT: '#000000',
+                            light: '#333333',
+                            lighter: '#666666'
+                        },
+                        accent: {
                             DEFAULT: '#6366f1',
+                            light: '#818cf8',
                             dark: '#4f46e5'
                         },
-                        dark: {
-                            DEFAULT: '#0f172a',
-                            light: '#1e293b'
-                        },
-                        light: '#f8fafc'
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717'
+                        }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        heading: ['Space Grotesk', 'sans-serif']
+                        serif: ['Playfair Display', 'serif']
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
                         'fade-in': 'fadeIn 1s ease-out forwards',
-                        'slide-up': 'slideUp 0.8s ease-out forwards'
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-down': 'slideDown 0.8s ease-out forwards',
+                        'slide-left': 'slideLeft 0.8s ease-out forwards',
+                        'slide-right': 'slideRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s infinite',
+                        'gradient-shift': 'gradientShift 8s ease-in-out infinite',
+                        'rotate-slow': 'rotateSlow 20s linear infinite'
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        }
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(50px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideDown: { '0%': { opacity: '0', transform: 'translateY(-50px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideLeft: { '0%': { opacity: '0', transform: 'translateX(50px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+                        slideRight: { '0%': { opacity: '0', transform: 'translateX(-50px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+                        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.8)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        gradientShift: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
+                        rotateSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } }
                     }
                 }
             }
         }
     </script>
-    
+
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            background-color: #020617;
-            color: #f8fafc;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .card-glass {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .skill-pill {
-            transition: all 0.3s ease;
-        }
-        
-        .skill-pill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
-        
-        .project-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
+        html { scroll-behavior: smooth; }
+        body { background-color: #ffffff; color: #000000; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        .gradient-text { background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899); background-size: 200% 200%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradientShift 8s ease-in-out infinite; }
+        .premium-card { background: #ffffff; border: 1px solid #e5e5e5; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(10px); }
+        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border-color: #6366f1; }
+        .skill-tag { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background: linear-gradient(135deg, #f8fafc, #f1f5f9); border: 1px solid #e2e8f0; }
+        .skill-tag:hover { transform: translateY(-3px) scale(1.05); background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; border-color: #6366f1; box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4); }
+        .project-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: center; overflow: hidden; position: relative; }
+        .project-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); transition: left 0.5s; }
+        .project-card:hover::before { left: 100%; }
+        .project-card:hover { transform: scale(1.05) rotateY(5deg); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .nav-link { position: relative; transition: all 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: linear-gradient(90deg, #6366f1, #8b5cf6); transition: all 0.3s ease; transform: translateX(-50%); }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #6366f1; transform: translateY(-2px); }
+        .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s; }
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4); }
+        .btn-secondary { border: 2px solid #000000; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        .btn-secondary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: #000000; transition: left 0.3s ease; z-index: -1; }
+        .btn-secondary:hover::before { left: 0; }
+        .btn-secondary:hover { color: white; transform: translateY(-2px); }
+        .floating-element { animation: float 6s ease-in-out infinite; }
+        .floating-element:nth-child(2) { animation-delay: -2s; }
+        .floating-element:nth-child(3) { animation-delay: -4s; }
+        .hero-bg { background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%); position: relative; overflow: hidden; }
+        .hero-bg::before { content: ''; position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%); animation: rotate-slow 20s linear infinite; }
+        .section-divider { background: linear-gradient(90deg, transparent, #e5e5e5, transparent); height: 1px; margin: 4rem 0; }
+        .form-input { transition: all 0.3s ease; border: 2px solid #e5e5e5; background: #fafafa; }
+        .form-input:focus { border-color: #6366f1; background: #ffffff; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1); transform: translateY(-2px); }
+        .hamburger { transition: all 0.3s ease; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+        .scroll-indicator { position: fixed; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899); transform-origin: left; transform: scaleX(0); transition: transform 0.3s ease; z-index: 1000; }
+        .parallax-element { transition: transform 0.1s ease-out; }
+        .stagger-1 { animation-delay: 0.1s; } .stagger-2 { animation-delay: 0.2s; } .stagger-3 { animation-delay: 0.3s; } .stagger-4 { animation-delay: 0.4s; } .stagger-5 { animation-delay: 0.5s; } .stagger-6 { animation-delay: 0.6s; }
+
+        /* --- NEW/IMPROVED MOBILE MENU STYLES --- */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #6366f1, #a855f7);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .hamburger {
-            transition: all 0.3s ease;
-        }
-        
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-        
-        .hamburger.active span:nth-child(2) {
+            z-index: 100; /* Under the hamburger/close button */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             opacity: 0;
+            visibility: hidden;
         }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
+        .mobile-menu.active {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
         }
-        
-        @media (max-width: 768px) {
-            .mobile-menu {
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-            }
-            
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
+        .mobile-menu-links a {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 1rem;
+            display: block;
+            text-align: center;
+        }
+        .mobile-menu-links a:hover {
+            color: #6366f1;
+            transform: scale(1.1);
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            z-index: 101;
+        }
+        .close-btn:hover {
+            transform: rotate(90deg);
+            color: #6366f1;
         }
     </style>
 </head>
 <body class="min-h-screen">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+
     <!-- Navigation -->
-    <header class="fixed w-full z-50">
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold font-heading gradient-text">Rafi.</a>
-            
+            <a href="#" class="text-3xl font-bold font-serif gradient-text">Rafi.</a>
+
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#contact" class="px-4 py-2 bg-primary rounded-lg font-medium hover:bg-primary-dark transition">Hire Me</a>
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#about" class="nav-link font-medium">About</a>
+                <a href="#skills" class="nav-link font-medium">Skills</a>
+                <a href="#projects" class="nav-link font-medium">Projects</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+                <a href="#contact" class="btn-primary px-6 py-3 text-white rounded-full font-semibold">Hire Me</a>
             </div>
-            
+
             <!-- Mobile Menu Button -->
-            <button class="md:hidden hamburger flex flex-col justify-center items-center" id="menu-btn">
-                <span class="bg-light block w-6 h-0.5 mb-1.5 transition-all"></span>
-                <span class="bg-light block w-6 h-0.5 mb-1.5 transition-all"></span>
-                <span class="bg-light block w-6 h-0.5 transition-all"></span>
+            <button class="md:hidden hamburger flex flex-col justify-center items-center z-[101]" id="menu-btn">
+                <span class="bg-black block w-6 h-0.5 mb-1.5 transition-all"></span>
+                <span class="bg-black block w-6 h-0.5 mb-1.5 transition-all"></span>
+                <span class="bg-black block w-6 h-0.5 transition-all"></span>
             </button>
         </nav>
-        
-        <!-- Mobile Menu -->
-        <div class="md:hidden mobile-menu fixed inset-0 bg-dark pt-24 px-6" id="mobile-menu">
-            <div class="flex flex-col space-y-6">
-                <a href="#home" class="text-xl py-2 border-b border-gray-800">Home</a>
-                <a href="#about" class="text-xl py-2 border-b border-gray-800">About</a>
-                <a href="#skills" class="text-xl py-2 border-b border-gray-800">Skills</a>
-                <a href="#projects" class="text-xl py-2 border-b border-gray-800">Projects</a>
-                <a href="#contact" class="text-xl py-2 border-b border-gray-800">Contact</a>
-                <a href="#contact" class="px-4 py-3 bg-primary rounded-lg font-medium text-center mt-4 hover:bg-primary-dark transition">Hire Me</a>
-            </div>
-        </div>
     </header>
 
+    <!-- NEW Mobile Menu Structure -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="close-btn" id="close-btn">×</div>
+        <div class="mobile-menu-links text-center">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="#contact" class="mobile-nav-link btn-primary px-8 py-4 text-white rounded-full font-semibold text-2xl mt-8 inline-block">Hire Me</a>
+        </div>
+    </div>
+
+
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-16">
+    <section id="home" class="min-h-screen flex items-center pt-20 hero-bg">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
-                        <span class="gradient-text">Crafting Digital</span><br>
-                        <span>Experiences That</span><br>
-                        <span class="gradient-text">Inspire</span>
-                    </h1>
-                    <p class="text-lg text-gray-400 mb-8 max-w-lg">
-                        I'm Rafi, a web developer based in Silicon Valley, passionate about building innovative digital solutions that make an impact.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#projects" class="px-6 py-3 bg-primary rounded-lg font-medium hover:bg-primary-dark transition">View Work</a>
-                        <a href="#contact" class="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:bg-opacity-10 transition">Contact Me</a>
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="animate-slide-down">
+                        <h1 class="text-5xl md:text-7xl font-bold font-serif mb-6 leading-tight">
+                            <span class="gradient-text">Crafting Digital</span><br>
+                            <span>Experiences That</span><br>
+                            <span class="gradient-text">Inspire</span>
+                        </h1>
+                    </div>
+                    <div class="animate-slide-up stagger-2">
+                        <p class="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                            I'm Rafi, a premium web developer based in Silicon Valley, passionate about building innovative digital solutions that make an extraordinary impact.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-slide-up stagger-3">
+                        <a href="#projects" class="btn-primary px-8 py-4 text-white rounded-full font-semibold text-lg">View My Work</a>
+                        <a href="#contact" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg relative z-10">Let's Connect</a>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center animation-float">
-                        <div class="absolute inset-0 rounded-full bg-primary opacity-20 blur-xl"></div>
-                        <div class="relative z-10 text-8xl">👨‍💻</div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative animate-scale-in stagger-4">
+                        <!-- Floating geometric shapes -->
+                        <div class="absolute -top-10 -left-10 w-20 h-20 bg-gradient-to-br from-accent to-purple-500 rounded-full floating-element opacity-20"></div>
+                        <div class="absolute -bottom-10 -right-10 w-16 h-16 bg-gradient-to-br from-pink-500 to-accent rounded-full floating-element opacity-20"></div>
+                        <div class="absolute top-1/2 -right-20 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full floating-element opacity-20"></div>
+
+                        <!-- Main hero image container -->
+                        <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-accent via-purple-500 to-pink-500 flex items-center justify-center floating-element">
+                            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-purple-500 opacity-30 blur-xl animate-pulse-slow"></div>
+                            <div class="relative z-10 text-8xl md:text-9xl">👨‍💻</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
     <!-- About Section -->
-    <section id="about" class="py-20 bg-dark">
+    <section id="about" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-                    <h2 class="text-3xl font-bold font-heading mb-6">
-                        <span class="gradient-text">About</span> Me
-                    </h2>
-                    <p class="text-gray-400 mb-6">
-                        Hello! I'm Rafi, a passionate web developer currently pursuing my B.Tech while working on exciting projects in Silicon Valley.
-                    </p>
-                    <p class="text-gray-400 mb-6">
-                        Originally from India, I've always been fascinated by how technology can transform ideas into reality. My journey in web development started when I built my first website at 16, and I've been hooked ever since.
-                    </p>
-                    <p class="text-gray-400 mb-8">
-                        When I'm not coding, you can find me exploring new coffee shops, reading tech blogs, or brainstorming my next big project.
-                    </p>
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                            <span class="text-xl">🎓</span>
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="animate-slide-right">
+                        <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+                            <span class="gradient-text">About</span> Me
+                        </h2>
+                    </div>
+                    <div class="space-y-6 text-gray-700 animate-slide-right stagger-2">
+                        <p class="text-lg leading-relaxed">
+                            Hello! I'm Rafi, a passionate web developer currently pursuing my B.Tech while working on exciting projects in Silicon Valley.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Originally from India, I've always been fascinated by how technology can transform ideas into reality. My journey in web development started when I built my first website at 16, and I've been hooked ever since.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            When I'm not coding, you can find me exploring new coffee shops, reading tech blogs, or brainstorming my next big project.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 mt-8 animate-slide-right stagger-3">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-purple-500 flex items-center justify-center">
+                            <span class="text-2xl">🎓</span>
                         </div>
                         <div>
-                            <h4 class="font-medium">B.Tech Student</h4>
-                            <p class="text-sm text-gray-400">Computer Science</p>
+                            <h4 class="font-semibold text-lg">B.Tech Student</h4>
+                            <p class="text-gray-600">Computer Science</p>
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.1s;">
-                        <div class="text-4xl mb-4 gradient-text">3+</div>
-                        <h3 class="font-medium mb-2">Years Experience</h3>
-                        <p class="text-sm text-gray-400">Building web applications</p>
-                    </div>
-                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.2s;">
-                        <div class="text-4xl mb-4 gradient-text">20+</div>
-                        <h3 class="font-medium mb-2">Projects</h3>
-                        <p class="text-sm text-gray-400">Completed successfully</p>
-                    </div>
-                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.3s;">
-                        <div class="text-4xl mb-4 gradient-text">100%</div>
-                        <h3 class="font-medium mb-2">Passion</h3>
-                        <p class="text-sm text-gray-400">For technology & innovation</p>
-                    </div>
-                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.4s;">
-                        <div class="text-4xl mb-4 gradient-text">24/7</div>
-                        <h3 class="font-medium mb-2">Coffee Mode</h3>
-                        <p class="text-sm text-gray-400">Always brewing ideas</p>
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="premium-card p-8 rounded-2xl animate-scale-in stagger-1">
+                            <div class="text-4xl font-bold gradient-text mb-2">3+</div>
+                            <h3 class="font-semibold text-lg mb-2">Years Experience</h3>
+                            <p class="text-gray-600">Building web applications</p>
+                        </div>
+                        <div class="premium-card p-8 rounded-2xl animate-scale-in stagger-2">
+                            <div class="text-4xl font-bold gradient-text mb-2">20+</div>
+                            <h3 class="font-semibold text-lg mb-2">Projects</h3>
+                            <p class="text-gray-600">Completed successfully</p>
+                        </div>
+                        <div class="premium-card p-8 rounded-2xl animate-scale-in stagger-3">
+                            <div class="text-4xl font-bold gradient-text mb-2">100%</div>
+                            <h3 class="font-semibold text-lg mb-2">Passion</h3>
+                            <p class="text-gray-600">For technology & innovation</p>
+                        </div>
+                        <div class="premium-card p-8 rounded-2xl animate-scale-in stagger-4">
+                            <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                            <h3 class="font-semibold text-lg mb-2">Coffee Mode</h3>
+                            <p class="text-gray-600">Always brewing ideas</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
 
     <!-- Skills Section -->
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold font-heading mb-4">
+                <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 animate-slide-up">
                     My <span class="gradient-text">Skills</span>
                 </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
                     I've worked with a wide range of technologies in web development. Here are some of my core competencies.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Frontend Skills -->
-                <div class="card-glass p-8 rounded-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
-                            <span class="text-primary">🖥️</span>
+                <div class="premium-card p-10 rounded-2xl animate-slide-left">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-purple-500 flex items-center justify-center mr-6">
+                            <span class="text-white text-2xl">🖥️</span>
                         </div>
-                        <h3 class="text-xl font-heading font-medium">Frontend Development</h3>
+                        <h3 class="text-2xl font-serif font-semibold">Frontend Development</h3>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">⚛️</span> React
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🌿</span> Vue.js
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">📄</span> HTML5
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🎨</span> CSS3
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">⚡</span> JavaScript
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">💅</span> Tailwind CSS
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">📦</span> Bootstrap
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🅰️</span> Angular
-                        </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">⚛️</span> React </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🌿</span> Vue.js </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">📄</span> HTML5 </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🎨</span> CSS3 </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">⚡</span> JavaScript </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">💅</span> Tailwind CSS </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">📦</span> Bootstrap </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🅰️</span> Angular </div>
                     </div>
                 </div>
                 
                 <!-- Backend Skills -->
-                <div class="card-glass p-8 rounded-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
-                            <span class="text-primary">⚙️</span>
+                <div class="premium-card p-10 rounded-2xl animate-slide-right">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-6">
+                            <span class="text-white text-2xl">⚙️</span>
                         </div>
-                        <h3 class="text-xl font-heading font-medium">Backend Development</h3>
+                        <h3 class="text-2xl font-serif font-semibold">Backend Development</h3>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🖥️</span> Node.js
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🚀</span> Express.js
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🐍</span> Python
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🐘</span> PHP
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🗄️</span> MySQL
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🍃</span> MongoDB
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🔥</span> Firebase
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">☕</span> Java
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">💎</span> Ruby on Rails
-                        </div>
-                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
-                            <span class="mr-2">🐘</span> PostgreSQL
-                        </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🖥️</span> Node.js </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🚀</span> Express.js </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🐍</span> Python </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🐘</span> PHP </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🗄️</span> MySQL </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🍃</span> MongoDB </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🔥</span> Firebase </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">☕</span> Java </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">💎</span> Ruby on Rails </div>
+                        <div class="skill-tag px-4 py-3 rounded-full flex items-center font-medium"> <span class="mr-2">🐘</span> PostgreSQL </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-dark">
+    <section id="projects" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold font-heading mb-4">
+                <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 animate-slide-up">
                     Featured <span class="gradient-text">Projects</span>
                 </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
                     Here are some of my recent projects that showcase my skills and creativity.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card card-glass rounded-xl overflow-hidden animation-slide-up" style="animation-delay: 0.1s;">
-                    <div class="h-48 bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center">
-                        <span class="text-6xl">📚</span>
+                <div class="project-card premium-card rounded-2xl overflow-hidden animate-scale-in stagger-1">
+                    <div class="h-56 bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <span class="text-6xl relative z-10">📚</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-heading font-medium mb-2">Edumark</h3>
-                        <p class="text-gray-400 mb-4">
-                            A dynamic platform revolutionizing education with interactive tools and resources.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">React</span>
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Node.js</span>
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">MongoDB</span>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-semibold mb-3">Edumark</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed"> A dynamic platform revolutionizing education with interactive tools and resources. </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">React</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">Node.js</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">MongoDB</span>
                         </div>
-                        <a href="#" class="text-primary font-medium hover:underline">View Project →</a>
+                        <a href="#" class="text-accent font-semibold hover:text-accent-dark transition-colors">View Project →</a>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="project-card card-glass rounded-xl overflow-hidden animation-slide-up" style="animation-delay: 0.2s;">
-                    <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
-                        <span class="text-6xl">🔥</span>
+                <div class="project-card premium-card rounded-2xl overflow-hidden animate-scale-in stagger-2">
+                    <div class="h-56 bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <span class="text-6xl relative z-10">🔥</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-heading font-medium mb-2">Hotface.site</h3>
-                        <p class="text-gray-400 mb-4">
-                            A sleek social platform connecting people through shared passions.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Vue.js</span>
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Firebase</span>
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Tailwind CSS</span>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-semibold mb-3">Hotface.site</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed"> A sleek social platform connecting people through shared passions. </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">Vue.js</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">Firebase</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">Tailwind CSS</span>
                         </div>
-                        <a href="https://www.hotface.site" target="_blank" class="text-primary font-medium hover:underline">Visit Site →</a>
+                        <a href="https://www.hotface.site" target="_blank" class="text-accent font-semibold hover:text-accent-dark transition-colors">Visit Site →</a>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="project-card card-glass rounded-xl overflow-hidden animation-slide-up" style="animation-delay: 0.3s;">
-                    <div class="h-48 bg-gradient-to-r from-amber-500 to-pink-500 flex items-center justify-center">
-                        <span class="text-6xl">🛍️</span>
+                <div class="project-card premium-card rounded-2xl overflow-hidden animate-scale-in stagger-3">
+                    <div class="h-56 bg-gradient-to-br from-amber-500 to-pink-500 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <span class="text-6xl relative z-10">🛍️</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-heading font-medium mb-2">Stylx.shop</h3>
-                        <p class="text-gray-400 mb-4">
-                            A modern e-commerce platform for trendy fashion and seamless shopping.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Next.js</span>
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Stripe</span>
-                            <span class="text-xs px-2 py-1 bg-dark-light rounded">PostgreSQL</span>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-semibold mb-3">Stylx.shop</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed"> A modern e-commerce platform for trendy fashion and seamless shopping. </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">Next.js</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">Stripe</span>
+                            <span class="text-sm px-3 py-1 bg-gray-100 rounded-full font-medium">PostgreSQL</span>
                         </div>
-                        <a href="https://www.stylx.shop" target="_blank" class="text-primary font-medium hover:underline">Visit Site →</a>
+                        <a href="https://www.stylx.shop" target="_blank" class="text-accent font-semibold hover:text-accent-dark transition-colors">Visit Site →</a>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-block px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:bg-opacity-10 transition">
-                    View All Projects
-                </a>
+                <a href="#" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg relative z-10"> View All Projects </a>
             </div>
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-3xl font-bold font-heading mb-4">
+            <div class="max-w-5xl mx-auto text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 animate-slide-up">
                     Let's <span class="gradient-text">Connect</span>
                 </h2>
-                <p class="text-gray-400">
+                <p class="text-xl text-gray-600 leading-relaxed animate-slide-up stagger-2">
                     Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="card-glass p-8 rounded-xl">
-                    <h3 class="text-xl font-heading font-medium mb-6">Get in Touch</h3>
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 bg-dark-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="premium-card p-10 rounded-2xl animate-slide-left">
+                    <h3 class="text-2xl font-serif font-semibold mb-8">Get in Touch</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold mb-3 text-gray-700">Name</label>
+                            <input type="text" id="name" class="form-input w-full px-4 py-4 rounded-xl focus:outline-none">
                         </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 bg-dark-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <div>
+                            <label for="email" class="block text-sm font-semibold mb-3 text-gray-700">Email</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-4 rounded-xl focus:outline-none">
                         </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-dark-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold mb-3 text-gray-700">Message</label>
+                            <textarea id="message" rows="5" class="form-input w-full px-4 py-4 rounded-xl focus:outline-none resize-none"></textarea>
                         </div>
-                        <button type="submit" class="w-full px-6 py-3 bg-primary rounded-lg font-medium hover:bg-primary-dark transition">
-                            Send Message
-                        </button>
+                        <button type="submit" class="btn-primary w-full px-6 py-4 text-white rounded-xl font-semibold text-lg"> Send Message </button>
                     </form>
                 </div>
                 
-                <div class="card-glass p-8 rounded-xl">
-                    <h3 class="text-xl font-heading font-medium mb-6">Contact Info</h3>
-                    <div class="space-y-6">
+                <div class="premium-card p-10 rounded-2xl animate-slide-right">
+                    <h3 class="text-2xl font-serif font-semibold mb-8">Contact Info</h3>
+                    <div class="space-y-8">
                         <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1">
-                                <span class="text-primary">✉️</span>
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-purple-500 flex items-center justify-center mr-6 mt-1">
+                                <span class="text-white text-xl">✉️</span>
                             </div>
                             <div>
-                                <h4 class="font-medium">Email</h4>
-                                <a href="mailto:heyxrafi@hotmail.com" class="text-gray-400 hover:text-primary transition">heyxrafi@hotmail.com</a>
+                                <h4 class="font-semibold text-lg mb-2">Email</h4>
+                                <a href="mailto:heyxrafi@hotmail.com" class="text-gray-600 hover:text-accent transition-colors text-lg">heyxrafi@hotmail.com</a>
                             </div>
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1">
-                                <span class="text-primary">🌐</span>
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-6 mt-1">
+                                <span class="text-white text-xl">🌐</span>
                             </div>
                             <div>
-                                <h4 class="font-medium">Social</h4>
-                                <div class="flex space-x-4 mt-2">
-                                    <a href="https://linkedin.com/in/rafi" target="_blank" class="text-gray-400 hover:text-primary transition">LinkedIn</a>
-                                    <a href="https://x.com/rafi" target="_blank" class="text-gray-400 hover:text-primary transition">Twitter</a>
-                                    <a href="https://www.instagram.com/0xrafi" target="_blank" class="text-gray-400 hover:text-primary transition">Instagram</a>
+                                <h4 class="font-semibold text-lg mb-3">Social</h4>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="https://linkedin.com/in/rafi" target="_blank" class="text-gray-600 hover:text-accent transition-colors">LinkedIn</a>
+                                    <a href="https://x.com/rafi" target="_blank" class="text-gray-600 hover:text-accent transition-colors">Twitter</a>
+                                    <a href="https://www.instagram.com/0xrafi" target="_blank" class="text-gray-600 hover:text-accent transition-colors">Instagram</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1">
-                                <span class="text-primary">📍</span>
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center mr-6 mt-1">
+                                <span class="text-white text-xl">📍</span>
                             </div>
                             <div>
-                                <h4 class="font-medium">Location</h4>
-                                <p class="text-gray-400">Silicon Valley, CA</p>
+                                <h4 class="font-semibold text-lg mb-2">Location</h4>
+                                <p class="text-gray-600 text-lg">Silicon Valley, CA</p>
                             </div>
                         </div>
                     </div>
@@ -525,81 +537,152 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-dark">
+    <footer class="py-12 bg-gray-50 border-t border-gray-200">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <a href="#" class="text-2xl font-bold font-heading gradient-text">Rafi.</a>
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-3xl font-bold font-serif gradient-text">Rafi.</a>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#home" class="text-gray-400 hover:text-primary transition">Home</a>
-                    <a href="#about" class="text-gray-400 hover:text-primary transition">About</a>
-                    <a href="#skills" class="text-gray-400 hover:text-primary transition">Skills</a>
-                    <a href="#projects" class="text-gray-400 hover:text-primary transition">Projects</a>
-                    <a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <a href="#home" class="text-gray-600 hover:text-accent transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-accent transition-colors font-medium">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-accent transition-colors font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-accent transition-colors font-medium">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-accent transition-colors font-medium">Contact</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© 2025 Rafi. All rights reserved. Built with passion in Silicon Valley.</p>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+                <p class="text-lg">© 2025 Rafi. All rights reserved. Built with passion in Silicon Valley.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // --- NEW/IMPROVED SCRIPT ---
+
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            menuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            menuBtn.classList.add('active');
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        }
+
+        function closeMenu() {
+            menuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Close mobile menu when clicking on a navigation link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
+
+        // --- ORIGINAL SCRIPTS (UNMODIFIED) ---
+
+        // Scroll Progress Indicator
+        const scrollIndicator = document.getElementById('scroll-indicator');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            scrollIndicator.style.transform = `scaleX(${scrollPercent})`;
         });
-        
-        // Scroll animations
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.animation-fade-in, .animation-slide-up');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementPosition < windowHeight - 100) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
+
+        // Scroll animations with Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) translateX(0) scale(1)';
+                    observer.unobserve(entry.target); // Optional: stop observing after animation
                 }
             });
-        };
+        }, observerOptions);
         
-        // Run once on page load
-        animateOnScroll();
-        
-        // Run on scroll
-        window.addEventListener('scroll', animateOnScroll);
-        
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-slide-down, .animate-slide-left, .animate-slide-right, .animate-scale-in').forEach(el => {
+            el.style.opacity = '0';
+            if (el.classList.contains('animate-slide-up')) el.style.transform = 'translateY(50px)';
+            else if (el.classList.contains('animate-slide-down')) el.style.transform = 'translateY(-50px)';
+            else if (el.classList.contains('animate-slide-left')) el.style.transform = 'translateX(50px)';
+            else if (el.classList.contains('animate-slide-right')) el.style.transform = 'translateX(-50px)';
+            else if (el.classList.contains('animate-scale-in')) el.style.transform = 'scale(0.8)';
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                // Do not prevent default for external links
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80; // Adjusted offset for fixed header
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            setTimeout(() => {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add loading animation to page
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+
+        // Initialize page opacity
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
     </script>
 </body>
-</html>
+</html>```
