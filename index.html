@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafi | Premium Web Developer & Designer | Silicon Valley</title>
-    <meta name="description" content="Premium web developer creating exceptional digital experiences with cutting-edge technologies. Based in Silicon Valley.">
-
+    <title>Rafi | Web Developer & Designer | Silicon Valley</title>
+    <meta name="description" content="Innovative web developer creating digital experiences with cutting-edge technologies. Based in Silicon Valley.">
+    
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Rafi | Premium Web Developer Portfolio">
-    <meta property="og:description" content="Crafting the future with code. Premium web developer specializing in modern web technologies.">
+    <meta property="og:title" content="Rafi | Web Developer Portfolio">
+    <meta property="og:description" content="Crafting the future with code. Web developer specializing in modern web technologies.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rafi.dev">
     <meta property="og:image" content="https://rafi.dev/social-preview.jpg">
-
+    
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/wFLSmtKN/Picsart-25-06-20-18-18-20-681.png">
-
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,493 +29,577 @@
                 extend: {
                     colors: {
                         primary: {
-                            DEFAULT: '#000000',
-                            light: '#333333',
-                            lighter: '#666666'
-                        },
-                        accent: {
                             DEFAULT: '#6366f1',
-                            light: '#818cf8',
                             dark: '#4f46e5'
                         },
-                        gray: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            200: '#e5e5e5',
-                            300: '#d4d4d4',
-                            400: '#a3a3a3',
-                            500: '#737373',
-                            600: '#525252',
-                            700: '#404040',
-                            800: '#262626',
-                            900: '#171717'
-                        }
+                        dark: {
+                            DEFAULT: '#0f172a',
+                            light: '#1e293b'
+                        },
+                        light: '#f8fafc'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        heading: ['Space Grotesk', 'sans-serif']
                     },
                     animation: {
-                        'fade-in': 'fadeIn 1s ease-out forwards',
-                        'slide-up': 'slideUp 0.8s ease-out forwards',
-                        'slide-down': 'slideDown 0.8s ease-out forwards',
-                        'slide-left': 'slideLeft 0.8s ease-out forwards',
-                        'slide-right': 'slideRight 0.8s ease-out forwards',
-                        'scale-in': 'scaleIn 0.6s ease-out forwards',
                         'float': 'float 6s ease-in-out infinite',
-                        'bounce-slow': 'bounce 3s infinite',
-                        'pulse-slow': 'pulse 4s infinite',
-                        'gradient-shift': 'gradientShift 8s ease-in-out infinite',
-                        'rotate-slow': 'rotateSlow 20s linear infinite',
-                        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
-                        'morph': 'morph 8s ease-in-out infinite',
-                        'slide-in-blur': 'slideInBlur 1s ease-out forwards',
-                        'text-reveal': 'textReveal 1.5s ease-out forwards',
-                        'magnetic': 'magnetic 0.3s ease-out',
-                        'tilt': 'tilt 0.3s ease-out'
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards'
                     },
                     keyframes: {
-                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        slideUp: { '0%': { opacity: '0', transform: 'translateY(50px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-                        slideDown: { '0%': { opacity: '0', transform: 'translateY(-50px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-                        slideLeft: { '0%': { opacity: '0', transform: 'translateX(50px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
-                        slideRight: { '0%': { opacity: '0', transform: 'translateX(-50px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
-                        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.8)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
-                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
-                        gradientShift: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
-                        rotateSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
-                        glowPulse: { '0%, 100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)' }, '50%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.6)' } },
-                        morph: { '0%, 100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' }, '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' } },
-                        slideInBlur: { '0%': { opacity: '0', transform: 'translateY(30px)', filter: 'blur(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' } },
-                        textReveal: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-                        magnetic: { '0%': { transform: 'translate(0, 0)' }, '100%': { transform: 'translate(var(--x, 0), var(--y, 0))' } },
-                        tilt: { '0%': { transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)' }, '100%': { transform: 'perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))' } }
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
                     }
                 }
             }
         }
     </script>
-
+    
     <style>
-        html { scroll-behavior: smooth; }
-        body { background-color: #ffffff; color: #000000; font-family: 'Inter', sans-serif; line-height: 1.6; }
-        
-        /* Enhanced Gradient Text */
-        .gradient-text { 
-            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899, #f59e0b); 
-            background-size: 300% 300%; 
-            -webkit-background-clip: text; 
-            background-clip: text; 
-            color: transparent; 
-            animation: gradientShift 8s ease-in-out infinite; 
+        html {
+            scroll-behavior: smooth;
         }
         
-        /* Premium Card with Enhanced Effects */
-        .premium-card { 
-            background: rgba(255, 255, 255, 0.95); 
-            border: 1px solid rgba(255, 255, 255, 0.2); 
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); 
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-            backdrop-filter: blur(20px); 
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+        }
+        
+        .nav-link {
             position: relative;
-            overflow: hidden;
         }
-        .premium-card::before {
+        
+        .nav-link::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.6s;
-        }
-        .premium-card:hover::before { left: 100%; }
-        .premium-card:hover { 
-            transform: translateY(-12px) scale(1.02); 
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15); 
-            border-color: #6366f1; 
-        }
-        
-        /* Enhanced Skill Tags */
-        .skill-tag { 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9); 
-            border: 1px solid #e2e8f0; 
-            position: relative;
-            overflow: hidden;
-        }
-        .skill-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            transition: left 0.3s;
-            z-index: -1;
-        }
-        .skill-tag:hover::before { left: 0; }
-        .skill-tag:hover { 
-            transform: translateY(-4px) scale(1.05); 
-            color: white; 
-            border-color: #6366f1; 
-            box-shadow: 0 15px 25px rgba(99, 102, 241, 0.4); 
-        }
-        
-        /* Enhanced Project Cards */
-        .project-card { 
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
-            transform-origin: center; 
-            overflow: hidden; 
-            position: relative; 
-        }
-        .project-card::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: -100%; 
-            width: 100%; 
-            height: 100%; 
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); 
-            transition: left 0.5s; 
-            z-index: 1;
-        }
-        .project-card:hover::before { left: 100%; }
-        .project-card:hover { 
-            transform: scale(1.05) rotateY(5deg) rotateX(2deg); 
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25); 
-        }
-        
-        /* Enhanced Navigation */
-        .nav-link { 
-            position: relative; 
-            transition: all 0.3s ease; 
-        }
-        .nav-link::after { 
-            content: ''; 
-            position: absolute; 
-            bottom: -4px; 
-            left: 50%; 
-            width: 0; 
-            height: 3px; 
-            background: linear-gradient(90deg, #6366f1, #8b5cf6); 
-            transition: all 0.3s ease; 
-            transform: translateX(-50%); 
-            border-radius: 2px;
-        }
-        .nav-link:hover::after { width: 100%; }
-        .nav-link:hover { 
-            color: #6366f1; 
-            transform: translateY(-2px); 
-        }
-        
-        /* Enhanced Buttons */
-        .btn-primary { 
-            background: linear-gradient(135deg, #6366f1, #8b5cf6); 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            position: relative; 
-            overflow: hidden; 
-        }
-        .btn-primary::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: -100%; 
-            width: 100%; 
-            height: 100%; 
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); 
-            transition: left 0.5s; 
-        }
-        .btn-primary:hover::before { left: 100%; }
-        .btn-primary:hover { 
-            transform: translateY(-3px) scale(1.05); 
-            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4); 
-        }
-        
-        .btn-secondary { 
-            border: 2px solid #000000; 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            position: relative; 
-            overflow: hidden; 
-        }
-        .btn-secondary::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: -100%; 
-            width: 100%; 
-            height: 100%; 
-            background: #000000; 
-            transition: left 0.3s ease; 
-            z-index: -1; 
-        }
-        .btn-secondary:hover::before { left: 0; }
-        .btn-secondary:hover { 
-            color: white; 
-            transform: translateY(-3px) scale(1.05); 
-        }
-        
-        /* Enhanced Floating Elements */
-        .floating-element { 
-            animation: float 6s ease-in-out infinite; 
-        }
-        .floating-element:nth-child(2) { animation-delay: -2s; }
-        .floating-element:nth-child(3) { animation-delay: -4s; }
-        
-        /* Enhanced Hero Background */
-        .hero-bg { 
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%); 
-            position: relative; 
-            overflow: hidden; 
-        }
-        .hero-bg::before { 
-            content: ''; 
-            position: absolute; 
-            top: -50%; 
-            right: -50%; 
-            width: 100%; 
-            height: 100%; 
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%); 
-            animation: rotate-slow 20s linear infinite; 
-        }
-        
-        /* Enhanced Section Divider */
-        .section-divider { 
-            background: linear-gradient(90deg, transparent, #e5e5e5, transparent); 
-            height: 1px; 
-            margin: 4rem 0; 
-        }
-        
-        /* Enhanced Form Inputs */
-        .form-input { 
-            transition: all 0.3s ease; 
-            border: 2px solid #e5e5e5; 
-            background: #fafafa; 
-        }
-        .form-input:focus { 
-            border-color: #6366f1; 
-            background: #ffffff; 
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); 
-            transform: translateY(-2px); 
-        }
-        
-        /* Enhanced Mobile Menu */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
+            bottom: -2px;
             left: 0;
-            z-index: 100;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-        }
-        .mobile-menu.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
-        }
-        .mobile-menu-links a {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #333;
-            transition: all 0.3s ease;
-            padding: 1rem;
-            display: block;
-            text-align: center;
-            position: relative;
-        }
-        .mobile-menu-links a::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
             width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        .mobile-menu-links a:hover::before { width: 80%; }
-        .mobile-menu-links a:hover {
-            color: #6366f1;
-            transform: scale(1.1);
+            height: 2px;
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+            transition: width 0.3s ease;
         }
         
-        /* Enhanced Hamburger */
-        .hamburger { 
-            transition: all 0.3s ease; 
-        }
-        .hamburger.active span:nth-child(1) { 
-            transform: rotate(45deg) translate(6px, 6px); 
-        }
-        .hamburger.active span:nth-child(2) { 
-            opacity: 0; 
-        }
-        .hamburger.active span:nth-child(3) { 
-            transform: rotate(-45deg) translate(6px, -6px); 
-        }
-        
-        /* Enhanced Scroll Indicator */
-        .scroll-indicator { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 4px; 
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899); 
-            transform-origin: left; 
-            transform: scaleX(0); 
-            transition: transform 0.3s ease; 
-            z-index: 1000; 
-        }
-        
-        /* Enhanced Parallax */
-        .parallax-element { 
-            transition: transform 0.1s ease-out; 
-        }
-        
-        /* Stagger Animations */
-        .stagger-1 { animation-delay: 0.1s; } 
-        .stagger-2 { animation-delay: 0.2s; } 
-        .stagger-3 { animation-delay: 0.3s; } 
-        .stagger-4 { animation-delay: 0.4s; } 
-        .stagger-5 { animation-delay: 0.5s; } 
-        .stagger-6 { animation-delay: 0.6s; }
-        
-        /* New Premium Effects */
-        .glow-effect {
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-            animation: glow-pulse 3s ease-in-out infinite;
-        }
-        
-        .morphing-shape {
-            animation: morph 8s ease-in-out infinite;
-        }
-        
-        .text-reveal {
-            opacity: 0;
-            animation: text-reveal 1.5s ease-out forwards;
-        }
-        
-        .slide-in-blur {
-            opacity: 0;
-            animation: slide-in-blur 1s ease-out forwards;
-        }
-        
-        /* Magnetic Effect */
-        .magnetic {
-            transition: transform 0.3s ease;
-        }
-        
-        /* 3D Tilt Effect */
-        .tilt-3d {
-            transform-style: preserve-3d;
-            transition: transform 0.3s ease;
-        }
-        
-        /* Close Button */
-        .close-btn {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 2.5rem;
-            color: #333;
-            cursor: pointer;
-            transition: transform 0.3s ease, color 0.3s ease;
-            z-index: 101;
-        }
-        .close-btn:hover {
-            transform: rotate(90deg);
-            color: #6366f1;
-        }
-        
-        /* Real Icon Styles */
-        .icon-container {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 2rem;
-            height: 2rem;
-            margin-right: 0.5rem;
-        }
-        
-        .icon-svg {
+        .nav-link:hover::after {
             width: 100%;
-            height: 100%;
-            fill: currentColor;
         }
         
-        /* Enhanced Responsive Design */
+        .hamburger {
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
         @media (max-width: 768px) {
-            .hero-bg::before {
-                top: -30%;
-                right: -30%;
+            .mobile-menu {
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
             }
             
-            .floating-element {
-                animation-duration: 4s;
-            }
-            
-            .premium-card:hover {
-                transform: translateY(-8px) scale(1.01);
-            }
-            
-            .project-card:hover {
-                transform: scale(1.03) rotateY(2deg);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .gradient-text {
-                background-size: 200% 200%;
-            }
-            
-            .skill-tag:hover {
-                transform: translateY(-2px) scale(1.03);
+            .mobile-menu.active {
+                transform: translateX(0);
             }
         }
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-indicator" id="scroll-indicator"></div>
-
     <!-- Navigation -->
-    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header class="fixed w-full z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold font-serif gradient-text">Rafi.</a>
-
+            <a href="#" class="text-2xl font-bold font-heading gradient-text">Rafi.</a>
+            
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link font-medium">Home</a>
-                <a href="#about" class="nav-link font-medium">About</a>
-                <a href="#skills" class="nav-link font-medium">Skills</a>
-                <a href="#projects" class="nav-link font-medium">Projects</a>
-                <a href="#contact" class="nav-link font-medium">Contact</a>
-                <a href="#contact" class="btn-primary px-6 py-3 text-white rounded-full font-semibold magnetic">Hire Me</a>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="px-4 py-2 bg-primary rounded-lg font-medium hover:bg-primary-dark transition">Hire Me</a>
             </div>
-
+            
             <!-- Mobile Menu Button -->
-            <button class="md:hidden hamburger flex flex-col justify-center items-center z-[101]" id="menu-btn">
-                <span class="bg-black block w-6 h-0.5 mb-1.5 transition-all"></span>
-                <span class="bg-black block w-6 h-0.5 mb-1.5 transition-all"></span>
-                <span class="bg-black block w-6 h-0.5 transition-all"></span>
+            <button class="md:hidden hamburger flex flex-col justify-center items-center" id="menu-btn">
+                <span class="bg-light block w-6 h-0.5 mb-1.5 transition-all"></span>
+                <span class="bg-light block w-6 h-0.5 mb-1.5 transition-all"></span>
+                <span class="bg-light block w-6 h-0.5 transition-all"></span>
             </button>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden mobile-menu fixed inset-0 bg-dark pt-24 px-6" id="mobile-menu">
+            <div class="flex flex-col space-y-6">
+                <a href="#home" class="text-xl py-2 border-b border-gray-800">Home</a>
+                <a href="#about" class="text-xl py-2 border-b border-gray-800">About</a>
+                <a href="#skills" class="text-xl py-2 border-b border-gray-800">Skills</a>
+                <a href="#projects" class="text-xl py-2 border-b border-gray-800">Projects</a>
+                <a href="#contact" class="text-xl py-2 border-b border-gray-800">Contact</a>
+                <a href="#contact" class="px-4 py-3 bg-primary rounded-lg font-medium text-center mt-4 hover:bg-primary-dark transition">Hire Me</a>
+            </div>
+        </div>
     </header>
 
-    <!-- Enhanced Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="close-btn" id="close-btn">&times;</div>
-        <div class="mobile-menu-links text-cent
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+                        <span class="gradient-text">Crafting Digital</span><br>
+                        <span>Experiences That</span><br>
+                        <span class="gradient-text">Inspire</span>
+                    </h1>
+                    <p class="text-lg text-gray-400 mb-8 max-w-lg">
+                        I'm Rafi, a web developer based in Silicon Valley, passionate about building innovative digital solutions that make an impact.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-primary rounded-lg font-medium hover:bg-primary-dark transition">View Work</a>
+                        <a href="#contact" class="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:bg-opacity-10 transition">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center animation-float">
+                        <div class="absolute inset-0 rounded-full bg-primary opacity-20 blur-xl"></div>
+                        <div class="relative z-10 text-8xl">👨‍💻</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold font-heading mb-6">
+                        <span class="gradient-text">About</span> Me
+                    </h2>
+                    <p class="text-gray-400 mb-6">
+                        Hello! I'm Rafi, a passionate web developer currently pursuing my B.Tech while working on exciting projects in Silicon Valley.
+                    </p>
+                    <p class="text-gray-400 mb-6">
+                        Originally from India, I've always been fascinated by how technology can transform ideas into reality. My journey in web development started when I built my first website at 16, and I've been hooked ever since.
+                    </p>
+                    <p class="text-gray-400 mb-8">
+                        When I'm not coding, you can find me exploring new coffee shops, reading tech blogs, or brainstorming my next big project.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                            <span class="text-xl">🎓</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">B.Tech Student</h4>
+                            <p class="text-sm text-gray-400">Computer Science</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.1s;">
+                        <div class="text-4xl mb-4 gradient-text">3+</div>
+                        <h3 class="font-medium mb-2">Years Experience</h3>
+                        <p class="text-sm text-gray-400">Building web applications</p>
+                    </div>
+                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.2s;">
+                        <div class="text-4xl mb-4 gradient-text">20+</div>
+                        <h3 class="font-medium mb-2">Projects</h3>
+                        <p class="text-sm text-gray-400">Completed successfully</p>
+                    </div>
+                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.3s;">
+                        <div class="text-4xl mb-4 gradient-text">100%</div>
+                        <h3 class="font-medium mb-2">Passion</h3>
+                        <p class="text-sm text-gray-400">For technology & innovation</p>
+                    </div>
+                    <div class="card-glass p-6 rounded-xl animation-fade-in" style="animation-delay: 0.4s;">
+                        <div class="text-4xl mb-4 gradient-text">24/7</div>
+                        <h3 class="font-medium mb-2">Coffee Mode</h3>
+                        <p class="text-sm text-gray-400">Always brewing ideas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-heading mb-4">
+                    My <span class="gradient-text">Skills</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    I've worked with a wide range of technologies in web development. Here are some of my core competencies.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Frontend Skills -->
+                <div class="card-glass p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
+                            <span class="text-primary">🖥️</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-medium">Frontend Development</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">⚛️</span> React
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🌿</span> Vue.js
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">📄</span> HTML5
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🎨</span> CSS3
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">⚡</span> JavaScript
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">💅</span> Tailwind CSS
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">📦</span> Bootstrap
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🅰️</span> Angular
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="card-glass p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
+                            <span class="text-primary">⚙️</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-medium">Backend Development</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🖥️</span> Node.js
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🚀</span> Express.js
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🐍</span> Python
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🐘</span> PHP
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🗄️</span> MySQL
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🍃</span> MongoDB
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🔥</span> Firebase
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">☕</span> Java
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">💎</span> Ruby on Rails
+                        </div>
+                        <div class="skill-pill px-4 py-2 bg-dark-light rounded-full flex items-center">
+                            <span class="mr-2">🐘</span> PostgreSQL
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-heading mb-4">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Here are some of my recent projects that showcase my skills and creativity.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card card-glass rounded-xl overflow-hidden animation-slide-up" style="animation-delay: 0.1s;">
+                    <div class="h-48 bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center">
+                        <span class="text-6xl">📚</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-medium mb-2">Edumark</h3>
+                        <p class="text-gray-400 mb-4">
+                            A dynamic platform revolutionizing education with interactive tools and resources.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-primary font-medium hover:underline">View Project →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card card-glass rounded-xl overflow-hidden animation-slide-up" style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+                        <span class="text-6xl">🔥</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-medium mb-2">Hotface.site</h3>
+                        <p class="text-gray-400 mb-4">
+                            A sleek social platform connecting people through shared passions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Vue.js</span>
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Firebase</span>
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Tailwind CSS</span>
+                        </div>
+                        <a href="https://www.hotface.site" target="_blank" class="text-primary font-medium hover:underline">Visit Site →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card card-glass rounded-xl overflow-hidden animation-slide-up" style="animation-delay: 0.3s;">
+                    <div class="h-48 bg-gradient-to-r from-amber-500 to-pink-500 flex items-center justify-center">
+                        <span class="text-6xl">🛍️</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-medium mb-2">Stylx.shop</h3>
+                        <p class="text-gray-400 mb-4">
+                            A modern e-commerce platform for trendy fashion and seamless shopping.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Next.js</span>
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">Stripe</span>
+                            <span class="text-xs px-2 py-1 bg-dark-light rounded">PostgreSQL</span>
+                        </div>
+                        <a href="https://www.stylx.shop" target="_blank" class="text-primary font-medium hover:underline">Visit Site →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:bg-opacity-10 transition">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold font-heading mb-4">
+                    Let's <span class="gradient-text">Connect</span>
+                </h2>
+                <p class="text-gray-400">
+                    Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card-glass p-8 rounded-xl">
+                    <h3 class="text-xl font-heading font-medium mb-6">Get in Touch</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-dark-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-dark-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-dark-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-primary rounded-lg font-medium hover:bg-primary-dark transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="card-glass p-8 rounded-xl">
+                    <h3 class="text-xl font-heading font-medium mb-6">Contact Info</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1">
+                                <span class="text-primary">✉️</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:heyxrafi@hotmail.com" class="text-gray-400 hover:text-primary transition">heyxrafi@hotmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1">
+                                <span class="text-primary">🌐</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Social</h4>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="https://linkedin.com/in/rafi" target="_blank" class="text-gray-400 hover:text-primary transition">LinkedIn</a>
+                                    <a href="https://x.com/rafi" target="_blank" class="text-gray-400 hover:text-primary transition">Twitter</a>
+                                    <a href="https://www.instagram.com/0xrafi" target="_blank" class="text-gray-400 hover:text-primary transition">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1">
+                                <span class="text-primary">📍</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-400">Silicon Valley, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold font-heading gradient-text">Rafi.</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-primary transition">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-primary transition">About</a>
+                    <a href="#skills" class="text-gray-400 hover:text-primary transition">Skills</a>
+                    <a href="#projects" class="text-gray-400 hover:text-primary transition">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Rafi. All rights reserved. Built with passion in Silicon Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Scroll animations
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animation-fade-in, .animation-slide-up');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Run once on page load
+        animateOnScroll();
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
