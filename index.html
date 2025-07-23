@@ -433,7 +433,19 @@
         }
         
         /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            /* Tablet adjustments */
+            .hero-text h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
         @media (max-width: 768px) {
+            /* Mobile landscape/tablet portrait */
             .hero-content {
                 flex-direction: column-reverse;
             }
@@ -441,10 +453,22 @@
             .hero-text {
                 text-align: center;
                 padding-top: 2rem;
+                width: 100%;
+            }
+            
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8rem;
             }
             
             .hero-image {
                 margin-bottom: 2rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
             
             .section-title::after {
@@ -452,12 +476,46 @@
                 transform: translateX(-50%);
                 width: 30%;
             }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-bottom: 2rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .about-text {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-info, .contact-form {
+                width: 100%;
+            }
         }
         
         @media (max-width: 480px) {
+            /* Mobile portrait */
             .btn-primary, .btn-secondary {
                 padding: 0.6rem 1.2rem;
                 font-size: 0.9rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.5rem;
             }
             
             .project-card {
@@ -466,6 +524,25 @@
             
             .mobile-menu-link {
                 font-size: 1.2rem;
+            }
+            
+            .skill-tag {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
             }
         }
         
@@ -505,12 +582,12 @@
     
     <!-- Navigation -->
     <nav class="fixed w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#home" class="text-2xl font-bold gradient-text">Rafi.</a>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
@@ -532,26 +609,26 @@
     </nav>
     
     <!-- Hero Section -->
-    <section id="home" class="hero-section pt-32 pb-20">
+    <section id="home" class="hero-section pt-28 md:pt-32 pb-16 md:pb-20">
         <div class="hero-pattern"></div>
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="hero-text md:w-1/2 animate-fade-in">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
                         Hi, I'm <span class="gradient-text">Rafi</span>
                         <span class="wave-animation">👋</span>
                     </h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">Premium Web Developer & Designer</h2>
-                    <p class="text-lg md:text-xl mb-8 text-gray-600 max-w-lg">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-700">Premium Web Developer & Designer</h2>
+                    <p class="text-base sm:text-lg md:text-xl mb-6 md:mb-8 text-gray-600 max-w-lg mx-auto md:mx-0">
                         Crafting exceptional digital experiences with cutting-edge technologies. Based in Silicon Valley.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#projects" class="btn-primary">View My Work</a>
-                        <a href="#contact" class="btn-secondary">Hire Me</a>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#projects" class="btn-primary text-center sm:text-left">View My Work</a>
+                        <a href="#contact" class="btn-secondary text-center sm:text-left">Hire Me</a>
                     </div>
                 </div>
-                <div class="hero-image md:w-1/2 mt-12 md:mt-0 flex justify-center animate-scale-in">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <div class="hero-image md:w-1/2 mt-8 sm:mt-12 md:mt-0 flex justify-center animate-scale-in">
+                    <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                         <img src="https://i.ibb.co/wFLSmtKN/Picsart-25-06-20-18-18-20-681.png" alt="Rafi - Web Developer" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -560,29 +637,29 @@
     </section>
     
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-16 text-center">About Me</h2>
+    <section id="about" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center">About Me</h2>
             
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-12 md:mb-0 flex justify-center animate-slide-left">
-                    <div class="relative w-64 h-64 rounded-2xl overflow-hidden shadow-xl">
+                <div class="md:w-1/3 mb-8 sm:mb-12 md:mb-0 flex justify-center animate-slide-left">
+                    <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-xl">
                         <img src="https://i.ibb.co/wFLSmtKN/Picsart-25-06-20-18-18-20-681.png" alt="Rafi" class="w-full h-full object-cover">
                     </div>
                 </div>
-                <div class="md:w-2/3 md:pl-12 animate-slide-right">
-                    <h3 class="text-2xl font-bold mb-6">Who I Am</h3>
-                    <p class="text-gray-600 mb-6">
+                <div class="md:w-2/3 md:pl-8 lg:pl-12 animate-slide-right">
+                    <h3 class="text-2xl font-bold mb-4 md:mb-6 text-center md:text-left">Who I Am</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-center md:text-left">
                         I'm a passionate web developer and designer with over 5 years of experience creating beautiful, functional, and user-friendly websites and applications. My journey in tech started when I was just 15 years old, and I've been obsessed with creating digital experiences ever since.
                     </p>
-                    <p class="text-gray-600 mb-6">
+                    <p class="text-gray-600 mb-4 md:mb-6 text-center md:text-left">
                         I specialize in modern web technologies and frameworks, with a strong focus on performance, accessibility, and responsive design. My goal is to build products that not only look amazing but also provide seamless user experiences.
                     </p>
-                    <p class="text-gray-600 mb-8">
+                    <p class="text-gray-600 mb-6 md:mb-8 text-center md:text-left">
                         When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or mentoring aspiring developers. I believe in continuous learning and staying at the forefront of web technologies.
                     </p>
-                    <div class="flex flex-wrap">
-                        <div class="w-full md:w-1/2 mb-6">
+                    <div class="flex flex-wrap justify-center md:justify-start">
+                        <div class="w-full sm:w-1/2 mb-4 md:mb-6">
                             <div class="flex items-center mb-2">
                                 <span class="w-4 h-4 bg-accent rounded-full mr-2"></span>
                                 <span class="font-semibold">Name:</span>
@@ -594,7 +671,7 @@
                                 <span class="ml-2">dev.rafi@hotmail.com</span>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/2 mb-6">
+                        <div class="w-full sm:w-1/2 mb-4 md:mb-6">
                             <div class="flex items-center mb-2">
                                 <span class="w-4 h-4 bg-accent rounded-full mr-2"></span>
                                 <span class="font-semibold">Phone:</span>
@@ -607,28 +684,30 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn-primary inline-flex items-center">
-                        Download CV
-                        <i class="fas fa-download ml-2"></i>
-                    </a>
+                    <div class="text-center md:text-left">
+                        <a href="#" class="btn-primary inline-flex items-center">
+                            Download CV
+                            <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-16 text-center">My Skills</h2>
+    <section id="skills" class="py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center">My Skills</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <div class="animate-slide-up">
-                    <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
-                    <p class="text-gray-600 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 md:mb-6 text-center md:text-left">Technical Skills</h3>
+                    <p class="text-gray-600 mb-6 md:mb-8 text-center md:text-left">
                         I've worked with a wide range of technologies in the web development world. From front-end to back-end, I've got you covered.
                     </p>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">HTML/CSS</span>
                             <span>95%</span>
@@ -638,7 +717,7 @@
                         </div>
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">JavaScript</span>
                             <span>90%</span>
@@ -648,7 +727,7 @@
                         </div>
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">React</span>
                             <span>85%</span>
@@ -658,7 +737,7 @@
                         </div>
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">Node.js</span>
                             <span>80%</span>
@@ -670,12 +749,12 @@
                 </div>
                 
                 <div class="animate-slide-up animate-delay-200">
-                    <h3 class="text-2xl font-bold mb-6">Professional Skills</h3>
-                    <p class="text-gray-600 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 md:mb-6 text-center md:text-left">Professional Skills</h3>
+                    <p class="text-gray-600 mb-6 md:mb-8 text-center md:text-left">
                         Beyond technical expertise, I bring a range of professional skills that ensure successful project delivery and client satisfaction.
                     </p>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">UI/UX Design</span>
                             <span>90%</span>
@@ -685,7 +764,7 @@
                         </div>
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">Communication</span>
                             <span>95%</span>
@@ -695,7 +774,7 @@
                         </div>
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">Project Management</span>
                             <span>85%</span>
@@ -705,7 +784,7 @@
                         </div>
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
                         <div class="flex justify-between mb-2">
                             <span class="font-semibold">Problem Solving</span>
                             <span>95%</span>
@@ -717,8 +796,8 @@
                 </div>
             </div>
             
-            <div class="mt-16 animate-fade-in">
-                <h3 class="text-2xl font-bold mb-8 text-center">Technologies I Work With</h3>
+            <div class="mt-12 md:mt-16 animate-fade-in">
+                <h3 class="text-2xl font-bold mb-6 md:mb-8 text-center">Technologies I Work With</h3>
                 <div class="flex flex-wrap justify-center">
                     <span class="skill-tag"><i class="fab fa-html5 mr-2 text-orange-500"></i> HTML5</span>
                     <span class="skill-tag"><i class="fab fa-css3-alt mr-2 text-blue-500"></i> CSS3</span>
@@ -742,17 +821,17 @@
     </section>
     
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-16 text-center">Featured Projects</h2>
+    <section id="projects" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center">Featured Projects</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Project 1 -->
                 <div class="project-card bg-white animate-slide-up">
                     <div class="overflow-hidden">
                         <img src="https://via.placeholder.com/600x400?text=EduMark" alt="EduMark" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold mb-2">EduMark</h3>
                         <p class="text-gray-600 mb-4">An innovative educational platform providing quality learning resources and tools for students and educators.</p>
                         <div class="flex flex-wrap mb-4">
@@ -771,7 +850,7 @@
                     <div class="overflow-hidden">
                         <img src="https://via.placeholder.com/600x400?text=ShopNoSZN" alt="ShopNoSZN" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold mb-2">ShopNoSZN</h3>
                         <p class="text-gray-600 mb-4">A modern e-commerce platform offering a seamless shopping experience with advanced features.</p>
                         <div class="flex flex-wrap mb-4">
@@ -790,7 +869,7 @@
                     <div class="overflow-hidden">
                         <img src="https://via.placeholder.com/600x400?text=HotFace" alt="HotFace" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold mb-2">HotFace</h3>
                         <p class="text-gray-600 mb-4">A social media platform focused on connecting people through shared interests and activities.</p>
                         <div class="flex flex-wrap mb-4">
@@ -805,7 +884,7 @@
                 </div>
             </div>
             
-            <div class="text-center mt-12 animate-fade-in">
+            <div class="text-center mt-10 md:mt-12 animate-fade-in">
                 <a href="#" class="btn-secondary inline-flex items-center">
                     View All Projects
                     <i class="fas fa-arrow-right ml-2"></i>
@@ -815,14 +894,14 @@
     </section>
     
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-16 text-center">Client Testimonials</h2>
+    <section id="testimonials" class="py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center">Client Testimonials</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card p-8 animate-slide-up">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="testimonial-card p-6 md:p-8 animate-slide-up">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden mr-4">
                             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -842,9 +921,9 @@
                     </div>
                 </div>
                 
-                <div class="testimonial-card p-8 animate-slide-up animate-delay-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                <div class="testimonial-card p-6 md:p-8 animate-slide-up animate-delay-200">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden mr-4">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -864,9 +943,9 @@
                     </div>
                 </div>
                 
-                <div class="testimonial-card p-8 animate-slide-up animate-delay-400">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                <div class="testimonial-card p-6 md:p-8 animate-slide-up animate-delay-400">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden mr-4">
                             <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="w-full h-full object-cover">
                         </div>
                         <div>
@@ -890,18 +969,18 @@
     </section>
     
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-16 text-center">Get In Touch</h2>
+    <section id="contact" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center">Get In Touch</h2>
             
-            <div class="flex flex-col lg:flex-row gap-12">
+            <div class="flex flex-col lg:flex-row gap-8 md:gap-12">
                 <div class="lg:w-1/2 animate-slide-left">
-                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                    <p class="text-gray-600 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 md:mb-6 text-center lg:text-left">Contact Information</h3>
+                    <p class="text-gray-600 mb-6 md:mb-8 text-center lg:text-left">
                         Have a project in mind or want to discuss potential opportunities? Feel free to reach out through any of the channels below. I typically respond within 24 hours.
                     </p>
                     
-                    <div class="space-y-6">
+                    <div class="space-y-4 md:space-y-6">
                         <div class="flex items-start">
                             <div class="bg-accent bg-opacity-10 p-3 rounded-full mr-4">
                                 <i class="fas fa-envelope text-accent"></i>
@@ -933,9 +1012,9 @@
                         </div>
                     </div>
                     
-                    <div class="mt-8">
-                        <h4 class="font-bold mb-4">Follow Me</h4>
-                        <div class="flex space-x-4">
+                    <div class="mt-6 md:mt-8 text-center lg:text-left">
+                        <h4 class="font-bold mb-3 md:mb-4">Follow Me</h4>
+                        <div class="flex justify-center lg:justify-start space-x-3 md:space-x-4">
                             <a href="#" class="social-icon hover:bg-blue-500 hover:text-white">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
@@ -953,8 +1032,8 @@
                 </div>
                 
                 <div class="lg:w-1/2 animate-slide-right">
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <form class="space-y-4 md:space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             <div>
                                 <label for="name" class="block mb-2 font-medium">Your Name</label>
                                 <input type="text" id="name" class="contact-input w-full" placeholder="John Doe">
@@ -983,15 +1062,15 @@
     </section>
     
     <!-- Footer -->
-    <footer class="py-12 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
+    <footer class="py-10 md:py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
                     <a href="#" class="text-2xl font-bold gradient-text">Rafi.</a>
                     <p class="mt-2 text-gray-400">Premium Web Developer & Designer</p>
                 </div>
                 
-                <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+                <div class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
                     <a href="#home" class="footer-link">Home</a>
                     <a href="#about" class="footer-link">About</a>
                     <a href="#skills" class="footer-link">Skills</a>
@@ -1000,9 +1079,9 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Rafi. All rights reserved.</p>
-                <div class="flex space-x-6">
+            <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0 text-center md:text-left">© 2023 Rafi. All rights reserved.</p>
+                <div class="flex space-x-4 md:space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
@@ -1029,17 +1108,27 @@
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
+            hamburger.classList.add('active');
         });
         
         closeMenu.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
+            hamburger.classList.remove('active');
         });
         
         function closeMobileMenu() {
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
+            hamburger.classList.remove('active');
         }
+        
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMobileMenu();
+            }
+        });
         
         // Scroll Indicator
         const scrollIndicator = document.getElementById('scrollIndicator');
@@ -1053,6 +1142,9 @@
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                // Skip smooth scroll for mobile menu links (handled by closeMobileMenu)
+                if (this.classList.contains('mobile-menu-link')) return;
+                
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
@@ -1068,12 +1160,17 @@
         });
         
         // Animation on scroll
-        const animateElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-slide-down, .animate-slide-left, .animate-slide-right, .animate-scale-in');
+        const animateElements = document.querySelectorAll('[class*="animate-"]');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in', 'animate-slide-up', 'animate-slide-down', 'animate-slide-left', 'animate-slide-right', 'animate-scale-in');
+                    // Add all animation classes that match the element's class list
+                    Array.from(entry.target.classList).forEach(className => {
+                        if (className.startsWith('animate-')) {
+                            entry.target.classList.add(className);
+                        }
+                    });
                     observer.unobserve(entry.target);
                 }
             });
@@ -1084,6 +1181,16 @@
         animateElements.forEach(element => {
             observer.observe(element);
         });
+        
+        // Handle window resize
+        function handleResize() {
+            // Close mobile menu if window is resized to desktop size
+            if (window.innerWidth >= 768) {
+                closeMobileMenu();
+            }
+        }
+        
+        window.addEventListener('resize', handleResize);
     </script>
 </body>
 </html>
